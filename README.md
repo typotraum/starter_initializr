@@ -1,0 +1,2 @@
+# nothingmore
+Drupal naked Theme 

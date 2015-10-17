@@ -2,8 +2,10 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   var theme_name = 'starter_initializr';
+  var style_name = 'style';
  
   var global_vars = {
+	style_name: style_name, 
     theme_name: theme_name,
     theme_css: 'css',
     theme_scss: 'scss',
@@ -18,30 +20,10 @@ module.exports = function(grunt) {
     '<%= global_vars.base_theme_path %>/js/vendor/fastclick.js'
   ];
 
-  // array of foundation javascript components to include.
- /*  var jsFoundation = [
-    '<%= global_vars.base_theme_path %>/js/foundation/foundation.js',
-    '<%= global_vars.base_theme_path %>/js/foundation/foundation.abide.js',
-    '<%= global_vars.base_theme_path %>/js/foundation/foundation.accordion.js',
-    '<%= global_vars.base_theme_path %>/js/foundation/foundation.alert.js',
-    '<%= global_vars.base_theme_path %>/js/foundation/foundation.clearing.js',
-    '<%= global_vars.base_theme_path %>/js/foundation/foundation.dropdown.js',
-    '<%= global_vars.base_theme_path %>/js/foundation/foundation.equalizer.js',
-    '<%= global_vars.base_theme_path %>/js/foundation/foundation.interchange.js',
-    '<%= global_vars.base_theme_path %>/js/foundation/foundation.joyride.js',
-    '<%= global_vars.base_theme_path %>/js/foundation/foundation.magellan.js',
-    '<%= global_vars.base_theme_path %>/js/foundation/foundation.offcanvas.js',
-    '<%= global_vars.base_theme_path %>/js/foundation/foundation.orbit.js',
-    '<%= global_vars.base_theme_path %>/js/foundation/foundation.reveal.js',
-    '<%= global_vars.base_theme_path %>/js/foundation/foundation.slider.js',
-    '<%= global_vars.base_theme_path %>/js/foundation/foundation.tab.js',
-    '<%= global_vars.base_theme_path %>/js/foundation/foundation.tooltip.js',
-    '<%= global_vars.base_theme_path %>/js/foundation/foundation.topbar.js'
-  ]; */
 
   // array of custom javascript files to include.
   var jsApp = [
-    'js/_*.js'
+    '<%= global_vars.base_theme_path %>/js/main.js'
   ];
 
   grunt.initConfig({
@@ -55,7 +37,8 @@ module.exports = function(grunt) {
           includePaths: ['<%= global_vars.theme_scss %>', '<%= global_vars.base_theme_path %>/scss/'].concat(bourbon)
         },
         files: {
-          '<%= global_vars.theme_css %>/<%= global_vars.theme_name %>.css': '<%= global_vars.theme_scss %>/<%= global_vars.theme_name %>.scss'
+          '<%= global_vars.theme_css %>/<%= global_vars.style_name %>.css': '<%= global_vars.theme_scss %>/<%= global_vars.style_name %>.scss',
+           '<%= global_vars.theme_css %>/bootstrap.min.css': '<%= global_vars.theme_scss %>/bootstrap.scss'
         }
       }
     },
@@ -76,7 +59,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'js/*.js': [jsLibs],
+          'js/main.js': [jsLibs]
           // 'js/foundation.min.js': [jsFoundation],
           // 'js/app.min.js': [jsApp]
       }

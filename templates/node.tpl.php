@@ -2,7 +2,7 @@
 
 /**
  * @file
- * nothingmores theme implementation to display a node.
+ * starter_initializrs theme implementation to display a node.
  *
  * Available variables:
  * - $title: the (sanitized) title of the node.

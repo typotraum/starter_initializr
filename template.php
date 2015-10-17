@@ -3,7 +3,7 @@
 /**
  * Add body classes if certain regions have content.
  */
-function nothingmore_preprocess_html(&$variables) {
+function starter_initializr_preprocess_html(&$variables) {
   if (!empty($variables['page']['featured'])) {
     $variables['classes_array'][] = 'featured';
   }
@@ -18,21 +18,21 @@ function nothingmore_preprocess_html(&$variables) {
 /**
  * Override or insert variables into the page template for HTML output.
  */
-function nothingmore_process_html(&$variables) {
+function starter_initializr_process_html(&$variables) {
  
 }
 
 /**
  * Override or insert variables into the page template.
  */
-function nothingmore_process_page(&$variables) {
+function starter_initializr_process_page(&$variables) {
 }
 
 
 /**
  * Override or insert variables into the node template.
  */
-function nothingmore_preprocess_node(&$variables) {
+function starter_initializr_preprocess_node(&$variables) {
 
 }
 /**
@@ -44,7 +44,7 @@ function nothingmore_preprocess_node(&$variables) {
 
 
 
-function nothingmore_menu_link(array $variables) {
+function starter_initializr_menu_link(array $variables) {
   $element = $variables['element'];
   $sub_menu = '';
 
@@ -62,5 +62,5 @@ function nothingmore_menu_link(array $variables) {
 /**
  * Override or insert variables into the block template.
  */
-function nothingmore_preprocess_block(&$variables) {
+function starter_initializr_preprocess_block(&$variables) {
 }

@@ -8,7 +8,7 @@
  *
  * @see template_preprocess()
  * @see template_preprocess_maintenance_page()
- * @see nothingmore_process_maintenance_page()
+ * @see starter_initializr_process_maintenance_page()
  */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"

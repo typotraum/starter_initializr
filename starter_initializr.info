@@ -5,6 +5,8 @@ core = 7.x
 stylesheets[all][] = css/style.css
 stylesheets[print][] = css/print.css
 
+scripts[] = js/vendor/modernizr-2.8.3-respond-1.4.2.min.js
+
 regions[header] = Header
 regions[content] = Content
 regions[sidebar_first] = Sidebar first

@@ -1,2 +1,2 @@
 # nothingmore
-Drupal naked Theme 
+Drupal naked Theme + Initializr -> Bootstrap, Modernizr
